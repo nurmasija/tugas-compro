@@ -10,9 +10,6 @@
 
                 </div>
                 <div class="form-group">
-                    <textarea name="description" class="form-control editor" placeholder="masukan deskripsi" id="" cols="30" rows="3" ></textarea>
-                </div>
-                <div class="form-group">
                     <input type="file" name="file" accept="image/.jpg, .png, .pdf, .docx" class="form-control form-control-user" placeholder="Masukan File">
                 </div>
                 <div>
