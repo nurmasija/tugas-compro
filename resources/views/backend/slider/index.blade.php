@@ -24,17 +24,24 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @php 
+                            $no=1;
+                        @endphp
+
+                        @foreach ($slider as $item)
                         <tr>
-                            <td>1</td>
-                            <td>Membuat Blog 1</td>
-                            <td><img src="images/IMG_0451.JPG" width="50%" alt=""></td>
+                            <td>{{$no++}}</td>
+                            <td>{{$item->tittle}}</td>
+                            <td><img src="{{asset($item->file)}}" width="50%" alt=""></td>
                             <td>Contoh </td>
                             <td><a href="" class="btn btn-warning">Edit</a>
                                 <form action="" method="post"></form>
                                 <button class="btn btn-danger">hapus</button>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
+                    
                 </table>
             </div>
         </div>
