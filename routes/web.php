@@ -1,9 +1,13 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
-
+use App\Http\Controllers\Backend\BlogController as BackendBlogController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Backend\SliderController;
+use App\Http\Controllers\Backend\ServiceController;
+use App\Http\Controllers\Backend\LoginController;
+use Faker\Guesser\Name;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +21,18 @@ use App\Http\Controllers\BlogController;
 */
 
 Route::get('/',[HomeController::class,'index'])->name('home');
-Route::get('/blog',[BlogController::class,'blog'])->name('blog');
-Route::get('/blog/detail',[BlogController::class,'detail'])->name('blog_detail');
-Route::get('/slider',[HomeController::class,'index'])->name('slider');
-Route::get('/service',[HomeController::class,'index'])->name('service');
+Route::get('/sliders',[HomeController::class,'index'])->name('sliders');
+Route::get('/services',[HomeController::class,'index'])->name('services');
+
+Route::get('/blog',[BlogController::class,'index'])->name('blog');
+Route::get('/blog/detail',
+[BlogController::class,'detail'])
+->name('blog_detail');
+
+
+
+// backend
+Route::get('backend/login',[LoginController::class,'index'])->name('backend.login');
+Route::get('backend/blog',[BackendBlogController::class,'index'])->name('backend.blog');
+Route::get('backend/slider',[SliderController::class,'index'])->name('backend.slider');
+Route::get('backend/service',[ServiceController::class,'index'])->name('backend.service');
