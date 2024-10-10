@@ -12,4 +12,7 @@ class ServiceController extends Controller
         $service = Services::get();
         return view('backend.service.index',['service'=>$service]);
     }
+    public function tambah(){
+        return view('backend.service.tambah');
+    }
 }

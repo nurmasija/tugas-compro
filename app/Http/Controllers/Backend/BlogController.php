@@ -12,5 +12,7 @@ class BlogController extends Controller
         $blog=Blogs::get();
         return view('backend.blog.index',['blog'=>$blog]);
     }
-    
+    public function tambah(){
+        return view('backend.blog.tambah');
+    }
 }
