@@ -24,15 +24,21 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @php 
+                            $no=1;
+                        @endphp
+
+                        @foreach ($service as $item)
                         <tr>
-                            <td>1</td>
-                            <td>Membuat Blog 1</td>
-                            <td>Contoh Aja</td>
+                            <td>{{$no++}}</td>
+                            <td>{{$item->tittle}}</td>
+                            <td>{{$item->description}}</td>
                             <td><a href="" class="btn btn-warning">Edit</a>
                                 <form action="" method="post"></form>
                                 <button class="btn btn-danger">hapus</button>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
