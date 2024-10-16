@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Sliders extends Model
 {
     use HasFactory;
+    //mengambil data table sliders dari localhost database
     protected $table='sliders';
 }

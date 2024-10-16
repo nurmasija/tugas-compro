@@ -1,3 +1,4 @@
+<!-- mengambil dan menampilkan halaman layouts master -->
 @extends('backend.layouts.master')
 @section('content')
     <div class="card shadow mb-4">

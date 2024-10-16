@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Services extends Model
 {
     use HasFactory;
+    //mengambil data table services dari localhost database
     protected $table='services';
 }

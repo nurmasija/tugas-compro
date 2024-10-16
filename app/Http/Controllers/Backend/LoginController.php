@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class SliderController extends Controller
 {
     public function index(){
+        //menampilkan halaman login
         return view('backend.login.index');
     }
 }
