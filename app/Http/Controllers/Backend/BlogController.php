@@ -25,6 +25,8 @@ class BlogController extends Controller
             'tittle' => $request->tittle,
             'description' => $request->description,
             'slug' => Str::slug($request->tittle),
+            'created_by' => 0,
+            'created_at' => date('Y-m-d h:i:s')
         ];
 
         if ($request->hasFile('file')){
