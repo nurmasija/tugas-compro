@@ -47,3 +47,7 @@ Route::get('backend/slider/edit/{id}',[SliderController::class,'edit'])->name('b
 Route::post('backend/slider/aksi_edit/{id}',[SliderController::class,'aksi_edit'])->name('backend.slider.aksi_edit');
 Route::get('backend/service',[ServiceController::class,'index'])->name('backend.service');
 Route::get('backend/service/tambah',[ServiceController::class,'tambah'])->name('backend.service.tambah');
+Route::post('backend/service/aksi_tambah',[ServiceController::class,'aksi_tambah'])->name('backend.service.aksi_tambah');
+Route::post('backend/service/aksi_hapus/{id}',[ServiceController::class,'aksi_hapus'])->name('backend.service.aksi_hapus');
+Route::get('backend/service/edit/{id}',[ServiceController::class,'edit'])->name('backend.service.edit');
+Route::post('backend/service/aksi_edit/{id}',[ServiceController::class,'aksi_edit'])->name('backend.service.aksi_edit');
